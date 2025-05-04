@@ -47,7 +47,11 @@ Using LCEL one can construct and implement custom chains but off-the-shelf chain
 
 The function signature:
 ```
-langchain.chains.combine_documents.stuff.create_stuff_documents_chain(llm: Runnable[Union[PromptValue, str, Sequence[Union[BaseMessage, List[str], Tuple[str, str], str, Dict[str, Any]]]], Union[BaseMessage, str]], prompt: BasePromptTemplate, *, output_parser: Optional[BaseOutputParser] = None, document_prompt: Optional[BasePromptTemplate] = None, document_separator: str = '\n\n', document_variable_name: str = 'context') → Runnable[Dict[str, Any], Any]
+langchain.chains.combine_documents.stuff.create_stuff_documents_chain(
+llm: Runnable[Union[PromptValue, str, Sequence[Union[BaseMessage, List[str], Tuple[str, str], str, Dict[str, Any]]]],
+ Union[BaseMessage, str]], prompt: BasePromptTemplate, *, output_parser: Optional[BaseOutputParser] = None,
+ document_prompt: Optional[BasePromptTemplate] = None, document_separator: str = '\n\n',
+ document_variable_name: str = 'context') → Runnable[Dict[str, Any], Any]
 ```
 
 #### Legacy Chains

@@ -23,6 +23,33 @@ LangChain Expression Language (LCEL) is a declarative way to easily compose chai
 
 * _LangSmith integration and tracing_ : with LCEL, all steps are automatically logged to `LangSmith` for maximum observability and ease of debugging
 
+
+### Chains
+
+Chains refer to sequences of calls - whether to an LLM, a tool, or a data preprocessing step. The primary way to implement a chain is by using LCEL but legacy chains are still supported. 
+Using LCEL one can construct and implement custom chains but off-the-shelf chains are available as well. There are two types of off-the-shelf chains that LangChain supports:
+
+* Chains that are built with LCEL. In this case LangChain offers a higher-level constructor method. However, all that is being done under the hood is constructing a chain with LCEL.
+
+* Legacy Chains constructed by subclassing from legacy `Chain` class. These chains do not use LCEL under the hood but are standalone classes.
+
+<ins>Note</ins>: Ongoing work is aiming at replacing all Legacy Chains with the LCEL implementations of those. This is done for the following reasons:
+
+1) uniform and consistent way to introduce changes in the chain logic by using LCEL
+2) native support for streaming, async and batch mode
+3) automatic observability support through LangSmith intergation
+
+#### LCEL Chains
+
+**LCEL chain constructors**
+
+
+
+#### Legacy Chains
+
+**MapReduceDocumentChain**
+
+
 ## Summarization
 
 **Use Case Description**
@@ -36,8 +63,9 @@ Suppose you have a set of documents (PDF's, `Notion` document pages, customer qu
 How to pass the documents to be summarized to the LLM's context window?
 Two comon approaches:
 
-1. Put all documents in a single prompt. This is the simplest approach but it comes with shortcomings.
+1. The _Stuff All Together_ approach: put all documents in a single prompt. This is the simplest approach but it comes with shortcomings.
 
-2. 
+2. The _Map-Reduce_ approach: summarize each document separately in a "map"
+ step and then "reduce" the summaries into a final summary.
 
 ![Figure: summarization example 1](images/summarization_use_case_2.png)

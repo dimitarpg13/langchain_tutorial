@@ -8,7 +8,10 @@ LangChain Expression Language (LCEL) is a declarative way to easily compose chai
 
 **Benefits of using LCEL**
 
-* Streaming support : 
+* _Streaming support_ :  short time-to-first-token, that is time elapsed until the first chink of output comes out, is acichieved with LCEL chains.
+  this means that the parser output from the streamed tokens from LLM to a streaming output parser is produced with the same rate as the LLM provider raw token output.
+
+* _Async support_ :
 
 ## Summarization
 

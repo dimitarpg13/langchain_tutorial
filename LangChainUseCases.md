@@ -8,7 +8,7 @@ Suppose you have a set of documents (PDF's, `Notion` document pages, customer qu
 ![Figure: summarization use case](images/summarization_use_case_1.png)
 
 
-
+<ins>Question:</ins>
 
 
 ![Figure: summarization example 1](images/summarization_use_case_2.png)

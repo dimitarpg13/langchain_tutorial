@@ -27,7 +27,7 @@ LLMs are typically accessed through a chat model interface that takes a list of 
 The _Tool_ abstraction in LangChain associates a Python function with a schema that defines the function's _name_, _description_ and _expected arguments_. 
 _Tools_ can be passed to chat models that support _tool calling_ allowing the model to request the execution of a specific function with specific inputs.
 
-** Concepts in Tools **
+**Concepts in Tools**
 
 * Tools are a way to encapsulate a function and its schema in a way that can be passed to a chat model.
 
@@ -36,7 +36,7 @@ _Tools_ can be passed to chat models that support _tool calling_ allowing the mo
   - Defining tools that return artifacts (e.g. images, dataframes, etc)
   - Hiding input arguments from the schema (and hence from the model) using injected tool arguments.
 
-** The Tool interface **
+**The Tool interface**
 
 
 

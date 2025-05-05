@@ -72,6 +72,31 @@ Input Parameters:
 
 Returns: an LCEL Runnable. The input is a dict that must have a "context" key that maps to a `List[Document]`, and any other input variables expected in the prompt. The Runnable return type depends on `output_parser` used.
 
+**Example**:
+
+```python
+# pip install -U langchain langchain-community
+
+from langchain_community.chat_models import ChatOpenAI
+from langchain_core.documents import Document
+from langchain_core.prompts import ChatPromptTemplate
+from langchain.chains.combine_documents import create_stuff_documents_chain
+
+prompt = ChatPromptTemplate.from_messages(
+    [("system", "What are everyone's favorite colors:\n\n{context}")]
+)
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+chain = create_stuff_documents_chain(llm, prompt)
+
+docs = [
+    Document(page_content="Jesse loves red but not yellow"),
+    Document(page_content = "Jamal loves green but not as much as he loves orange")
+]
+
+chain.invoke({"context": docs})
+
+```
+
 #### Legacy Chains
 
 **MapReduceDocumentChain**

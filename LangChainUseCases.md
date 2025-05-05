@@ -38,7 +38,18 @@ _Tools_ can be passed to chat models that support _tool calling_ allowing the mo
 
 **The Tool interface**
 
+The tool interface is defined in the BaseTool class which is a subclass of the Runnable interface.
 
+The key attributes that correspond to the tool's schema:
+
+* _name_ : the name of the tool
+* _description_ : a description of what the tool does
+* _args_ : property that returns the JSON schema for the tool's arguments
+
+The key methods to execute the function associated with the tool:
+
+* _invoke_ : invokes the tool with the given arguments
+* _ainvoke_ : 
 
 
 

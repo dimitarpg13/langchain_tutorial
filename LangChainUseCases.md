@@ -22,12 +22,40 @@ LLMs are typically accessed through a chat model interface that takes a list of 
 
 - [ ] TODO: finish the section on Messages
 
+### Tools
+
+The _Tool_ abstraction in LangChain associates a Python function with a schema that defines the function's _name_, _description_ and _expected arguments_. 
+_Tools_ can be passed to chat models that support _tool calling_ allowing the model to request the execution of a specific function with specific inputs.
+
+** Concepts in Tools **
+
+* Tools are a way to encapsulate a function and its schema in a way that can be passed to a chat model.
+
+* Create tools using the `@tool` decorator, which simplifies the process of tool creation, supporting the following:
+  - Automatically infer the tool's name, description, and expected arguments, while also supporting customization.
+  - Defining tools that return artifacts (e.g. images, dataframes, etc)
+  - Hiding input arguments from the schema (and hence from the model) using injected tool arguments.
+
+** The Tool interface **
+
+
+
+
+
+- [ ] TODO: finish the section on Tools
+
 ### Tool calling
 
 Many AI apps interact directly with humans. In these cases, it is appropriate for models to respond in natural language. 
 But what about cases where we want a model to also interact _directly_ with systems, such as databases or an API? These systems often have a particular input schema. For example, APIs frequently have a required payload structure. This need motivates the concept of _tool calling_. You can use tool calling to request model responses that match particular schema. 
 
 ![Figure: tool calling example](images/tool_calling_1.png)
+
+
+**Concepts in Tool calling**:
+
+(1) **Tool Creation**: use the `@tool` decorator to create a tool.
+
 
 - [ ] TODO: finish the section on Tool calling
 

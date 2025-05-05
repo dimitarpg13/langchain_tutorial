@@ -100,6 +100,17 @@ chain.invoke({"context": docs})
 #### Legacy Chains
 
 **MapReduceDocumentChain**
+//TODO: finish this section on Legacy chains
+
+### Structured outputs
+
+For many applications, such as chatbots, models need to respond to users directly in natural language. However, there are scenarios where we need models to output in a _structured format_. For example, we might want to store the model output in a database and ensure that the output conforms to the database schema. This need motivates the concept of structured output, where models can be instructed to respond with a particular output structure.
+
+![Figure: structured output example](images/structured_output_1.png)
+
+#### Returning structured data from a model
+
+We want to have a model return output which matches specific schema 
 
 
 ## Summarization

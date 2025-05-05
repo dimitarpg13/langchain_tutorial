@@ -112,7 +112,7 @@ chain.invoke({"context": docs})
 
 **MapReduceDocumentChain**
 
-$\textcolor{red}{\sslash TODO:\ finish\ this\ section\ on\ Legacy\ chains}$
+$\textcolor{red}{\mathrm{//TODO:\ finish\ this\ section\ on\ Legacy\ chains}}$
 
 ### Structured outputs
 

@@ -7,11 +7,29 @@
 Large Language Models (LLMs) are ML models used in a wide range of language-related tasks such as text generaton, translation, summarization, question answering, and more, without task-specific fine tuning for every scenario. 
 LLMs are typically accessed through a chat model interface that takes a list of messages as input and returns a message as an output.
 
+**Additional capabilities of modern chat models**:
+
+* Tool calling; many popular chat models offer a native tool calling API. This API allows developers to build rich applications that enable LLMs to interact with external services, APIs, and databases. Tool calling can also be used to extract structured information from unstructured data and perform various other tasks.
+
+* Structured output: a technique to make a chat model respond in a structured format, such as JSON that matches a given schema.
+
+* Multimodality: the ability to work with data other than text; for example, images, audio, and video 
+
+
 - [ ] TODO: finish the section on Chat models
 
 ### Messages
 
 - [ ] TODO: finish the section on Messages
+
+### Tool calling
+
+Many AI apps interact directly with humans. In these cases, it is appropriate for models to respond in natural language. 
+But what about cases where we want a model to also interact _directly_ with systems, such as databases or an API? These systems often have a particular input schema. For example, APIs frequently have a required payload structure. This need motivates the concept of _tool calling_. You can use tool calling to request model responses that match particular schema. 
+
+![Figure: tool calling example](images/tool_calling_1.png)
+
+- [ ] TODO: finish the section on Tool calling
 
 ### LangChain Expression Language (LCEL)
 

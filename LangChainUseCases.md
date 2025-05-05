@@ -4,7 +4,8 @@
 
 ### Chat models
 
-Large Language Models (LLMs) are ML models used in a wide range of language-related tasks such as text generaton, translation, summarization, question answering, and more, without task-specific fine tuning for every scenario.
+Large Language Models (LLMs) are ML models used in a wide range of language-related tasks such as text generaton, translation, summarization, question answering, and more, without task-specific fine tuning for every scenario. 
+LLMs are typically accessed through a chat model interface that takes a list of messages as input and returns a message as an output.
 
 
 

@@ -113,7 +113,7 @@ chain.invoke({"context": docs})
 **MapReduceDocumentChain**
 
 
-[ ] TODO: finish the section on Legacy Chains
+- [ ] TODO: finish the section on Legacy Chains
 
 ### Structured outputs
 

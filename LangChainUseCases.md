@@ -2,6 +2,12 @@
 
 ## Some Preliminaries
 
+### Chat models
+
+Large Language Models (LLMs) are ML models used in a wide range of language-related tasks such as text generaton, translation, summarization, question answering, and more, without task-specific fine tuning for every scenario.
+
+
+
 ### LangChain Expression Language (LCEL)
 
 LangChain Expression Language (LCEL) is a declarative way to easily compose chains together. LCEL was designed to support putting prototypes in production , with no code changes. LCEL can be used from the simplest "prompt + LLM" chain to the most complex chains having hundreds of steps. 
@@ -107,6 +113,27 @@ chain.invoke({"context": docs})
 For many applications, such as chatbots, models need to respond to users directly in natural language. However, there are scenarios where we need models to output in a _structured format_. For example, we might want to store the model output in a database and ensure that the output conforms to the database schema. This need motivates the concept of structured output, where models can be instructed to respond with a particular output structure.
 
 ![Figure: structured output example](images/structured_output_1.png)
+
+**Concepts in structured output**
+
+1) **Schema definition**: the output strcuture is represented as a schema, which can be defined in several ways. 
+
+2) **Returning structured output**: the model is given this schema, and is instructed to return output that conforms to it.
+
+**Recomended usage**:
+
+the code excerpt below illustrates the recommended workflow when using structured output. LangChain provides a method, `with_structured_output()`, that automates the process of binding the schema to the model and parsing the output. This helper function is available for all model providers that support structured output.
+
+```python
+# Define schema
+schema = {"foo": "bar"}
+# Bind schema to model
+model_with_structure = model.with_structured_output(schema)
+# Invoke the model to produce structured output that matches the schema
+structured_output = model_with_structure.invoke(user_input)
+
+```
+
 
 #### Returning structured data from a model
 

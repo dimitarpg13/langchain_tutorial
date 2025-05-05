@@ -60,6 +60,18 @@ langchain.chains.combine_documents.stuff.create_stuff_documents_chain(
 ) → Runnable[Dict[str, Any], Any]
 ```
 
+Input Parameters:
+* `llm` - the language model
+* `prompt`  - the prompt template.
+* `output_parser` - defaults to `StrOutputParser`
+* `document_prompt` - prompt used for formatting each document into a string. Input variables can be "page_content" or any metadata keys that are in all documents.
+  "page_content" will automatically retrieve the `Document.page_content`, and all other input variables will be automatically retrieved from the `Document.metadata`
+   dictionary. Defaults to a prompt that only contains `Document.page_content`.
+* `document_separator` - string separator to use between formatted document strings.
+* `document_variable_name` - variable name to use for the formatted documents in the prompt. Defaults to "context".
+
+Returns: an LCEL Runnable. The input is a dict that must have a "context" key that maps to a `List[Document]`, and any other input variables expected in the prompt. The Runnable return type depends on `output_parser` used.
+
 #### Legacy Chains
 
 **MapReduceDocumentChain**

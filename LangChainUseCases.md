@@ -29,4 +29,9 @@ Before anything install packages and set environmental variables
 import dotenv
 dotenv.load_dotenv()
 ```
+We can use `chain_type="stuff"`, especially if using larger context window models such as:
+
+ * 16k token OpenAI `gpt-3.5-turbo-1106`
+ * 100k token Anthropic _Claude-2_
+
 

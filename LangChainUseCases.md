@@ -32,6 +32,6 @@ dotenv.load_dotenv()
 We can use `chain_type="stuff"`, especially if using larger context window models such as:
 
  * 16k token OpenAI `gpt-3.5-turbo-1106`
- * 100k token Anthropic _Claude-2_
+ * 100k token Anthropic [Claude-2](https://www.anthropic.com/news/claude-2)
 
 

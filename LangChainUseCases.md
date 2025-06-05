@@ -23,7 +23,7 @@ Two comon approaches:
 
 Before anything install packages and set environmental variables
 
-```jupyter
+```jupyter-notebook
 %pip install --upgrade --quiet langchain-openai tiktoken chromadb langchain langchainhub
 ```
 

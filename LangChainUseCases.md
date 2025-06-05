@@ -26,3 +26,4 @@ Before anything install packages and set environmental variables
 ```python
 %pip install --upgrade --quiet langchain-openai tiktoken chromadb langchain langchainhub
 ```
+

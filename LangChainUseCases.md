@@ -20,3 +20,9 @@ Two comon approaches:
  step and then "reduce" the summaries into a final summary.
 
 ![Figure: summarization example 1](images/summarization_use_case_2.png)
+
+Before anything install packages and set environmental variables
+
+```python
+%pip install --upgrade --quiet langchain-openai tiktoken chromadb langchain langchainhub
+```

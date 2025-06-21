@@ -10,3 +10,8 @@
 [Building Effective Agents with LangGraph, @LangChain channel,  Jan 27, 2025](https://www.youtube.com/watch?v=aHCDrAbH_go)
 
 [Understanding MCP From Scratch, @LangChain channel, Mar 18, 2025](https://www.youtube.com/watch?v=CDjjaTALI68)
+
+
+## LangChain Academy
+
+[Introduction to LangGraph](https://academy.langchain.com/courses/take/intro-to-langgraph)

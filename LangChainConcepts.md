@@ -23,4 +23,16 @@ While `langchain-community` shares some common components for all partner packag
 
 `langgraph`
 
+`langgraph` is an extension of `langchain` aimed at building robust and stateful mulit-actor applications with LLMs by modeling steps as edges and nodes in a graph.
+
+LangGraph exposes high level interfaces for creating common types of agents, as well as a low-level API for composing custom flows. 
+
+`langserve`
+
+A package to deploy LangChain chains as REST APIs. Makes it easy to get a production ready API up and running.
+
+###### LangSMith
+
+A developer platform that lets you debug, test, evaulate and monitor LLM applications.
+
 

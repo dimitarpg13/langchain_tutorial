@@ -15,4 +15,12 @@ The main `lnagchain` package contains chains, agents, and retrieval strategies t
 
 `langchain-community`
 
-This package contains third-party integrations that are maintained by the LangChain community. 
+This package contains third-party integrations that are maintained by the LangChain community. Key partner packages are separated out. This contains all integrations for various components (LLMs, vector stores, retrievers). All dependencies in this package are optional to keep the package lightweight.
+
+##### Partner packages
+
+While `langchain-community` shares some common components for all partner packages, we split popular integrations into their own packages e.g. `langchain-openai`, `langchain-anthropic`, etc. This was done in order to improve support for these key integrations.
+
+`langgraph`
+
+

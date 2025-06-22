@@ -1,8 +1,8 @@
-## LangChain Concepts
+# LangChain Concepts
 
-### Conceptual Gide
+## Conceptual Gide
 
-#### Architecture
+### Architecture
 
 LangChain as a framework consists of a number of package.
 
@@ -17,7 +17,7 @@ The main `lnagchain` package contains chains, agents, and retrieval strategies t
 
 This package contains third-party integrations that are maintained by the LangChain community. Key partner packages are separated out. This contains all integrations for various components (LLMs, vector stores, retrievers). All dependencies in this package are optional to keep the package lightweight.
 
-##### Partner packages
+#### Partner packages
 
 While `langchain-community` shares some common components for all partner packages, we split popular integrations into their own packages e.g. `langchain-openai`, `langchain-anthropic`, etc. This was done in order to improve support for these key integrations.
 
@@ -31,8 +31,8 @@ LangGraph exposes high level interfaces for creating common types of agents, as 
 
 A package to deploy LangChain chains as REST APIs. Makes it easy to get a production ready API up and running.
 
-###### LangSMith
+##### LangSmith
 
 A developer platform that lets you debug, test, evaulate and monitor LLM applications.
 
-
+![image info](images/LangChain_packages.png)

@@ -35,4 +35,4 @@ A package to deploy LangChain chains as REST APIs. Makes it easy to get a produc
 
 A developer platform that lets you debug, test, evaulate and monitor LLM applications.
 
-![image info](images/LangChain_packages.png)
+![Figure: LangChain packages](images/LangChain_packages.png)

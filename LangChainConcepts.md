@@ -11,4 +11,8 @@ This package contains base abstractions of different components and ways to comp
 
 `langchain`
 
-The main `lnagchain` package contains chains, agents, and retrieval strategies that make up an application's cognitive architecture. 
+The main `lnagchain` package contains chains, agents, and retrieval strategies that make up an application's cognitive architecture. These are **not** third party integrations. All chains, agents, and retrieval strategies here are **not** specific to any one integration, but rather generic across all integrations.
+
+`langchain-community`
+
+This package contains third-party integrations that are maintained by the LangChain community. 

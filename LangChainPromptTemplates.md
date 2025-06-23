@@ -43,4 +43,20 @@ In the above example, this `ChatPromptTemplate` will construct two messages when
 
 More on `HumanMessage` and `SystemMessage` [here](https://python.langchain.com/api_reference/core/messages/langchain_core.messages.human.HumanMessage.html) and [here](https://python.langchain.com/api_reference/core/messages/langchain_core.messages.system.SystemMessage.html).
 
+### MessagesPlaceholder
 
+API Reference for `MessagesPlaceholder`: [here](https://python.langchain.com/api_reference/core/prompts/langchain_core.prompts.chat.MessagesPlaceholder.html)
+
+this prompt template is responsible for adding a list of messages in a particular place. In the above `ChatPromptTemplate` we saw how we could format two messages each one a string. But what if we wanted the user to pass in a list of messages that we would slot into a particular spot? This is how you use `MessagePlaceholder`:
+
+```python
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import HumanMessage
+
+prompt_template = ChatPromptTemplate([
+  ("system", "You are a helpful assistant"),
+  MessagesPlaceholder("msgs")
+])
+
+prompt_template.invoke({"msgs": [HumanMessage(content="hi!")]})
+```

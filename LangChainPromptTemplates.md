@@ -60,3 +60,13 @@ prompt_template = ChatPromptTemplate([
 
 prompt_template.invoke({"msgs": [HumanMessage(content="hi!")]})
 ```
+This will produce a list of two messages, the first one being a `SystemMessage`, and the second one being the `HumanMessage` we passed in. If we had passed in 5 messages, then it would have produced 6 messages in total (the `SystemMessage` instance plus the 5 passed in). This is usfeful for letting a list of messages be slotted into a particular spot. 
+
+An alternative way to accomplish the same thing without using the `MessagesPlaceholder` explicitly is:
+
+```python
+prompt_template = ChatPromptTemplate([
+   ("system", "You are a helpful assistant"),
+   ("placeholder", "{msgs}")  #  <-- This is the changed part
+])
+```

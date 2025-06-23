@@ -1,1 +1,2 @@
 docs/Langsmith-An_Interactive_Academic_Text_Revision_System_Ito_2020.pdf filter=lfs diff=lfs merge=lfs -text
+articles/BERT-Pre-training_of_Deep_Bidirectional_Transformers_for_Language_Understanding_Devlin_2018.pdf filter=lfs diff=lfs merge=lfs -text

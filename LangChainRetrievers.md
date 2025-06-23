@@ -8,4 +8,4 @@ Embedding models capture the essence of any text- a tweet, document, or book in 
 
 <ins>Concepts</ins>
 
-![Figure: The concept of Text Embedding](images/Emebddings_example.png)
+![Figure: The concept of Text Embedding](images/Emebdding_example.png)

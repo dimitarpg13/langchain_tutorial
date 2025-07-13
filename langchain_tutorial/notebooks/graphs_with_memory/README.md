@@ -2,4 +2,4 @@
 
 ## First Step: simple graph
 
-![Figure: Simple Graph with LangChain](images/simple_graph.png)
+![Figure: Simple Graph with LangChain](../../../images/simple_graph.png)

@@ -4,7 +4,7 @@
 
 <!-- ![Figure: Simple Graph with LangChain](../../../images/simple_graph.png) -->
 
-<img src="../../../images/simple_graph.png" alt="Figure: Simple Graph with LangChain" width="200"/>
+<img src="../../../images/simple_graph.png" alt="Figure: Simple Graph with LangChain" width="500"/>
 
 In order to define simple graph with LangChain first we need to deal with [the State of the graph](https://langchain-ai.github.io/langgraph/concepts/low_level/#state).
 

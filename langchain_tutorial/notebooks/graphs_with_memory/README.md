@@ -11,6 +11,47 @@ In order to define simple graph with LangChain first we need to deal with [the S
 ### The State of the Graph
 
 The `State` of the graph consists of the _Schema_ of the Graph as well as _Reducer Functions_. Both are defined in the next sections.
+The `State` in LangGraph can be a `TypedDict`, `Pydantic` model, or a dataclass. 
+
+Let us consider a simple example using _messages_.
+
+### Working with Messages in Graph State
+
+Most modern LLM providers have a chat model interface that accepts a list of messages as input. LangChain's `ChatModel` in particular accepts a list of `Message` objects as inputs. These messages come in a variety of forms such as `HumanMessage` (user input) or `AIMessage` (LLM response). 
+
+We can store prior conversation history as a list of messages in the graph state of our graph implementation. To do so, add a key (channl) to the graph state that stores a list of `Message` objects and annotate it with reducer function. 
+  Additionally, we can manually add messages in graph state (e.g. human-in-the-loop) if we use `operator.add`. 
+  If we want to manually update existing messages we need to a reducer that can keep track of message IDs and overwrite existing messages if updated. For this purpose we can use the prebuilt `add_messages` function. For brand new messages `add_messages` will simply append those to the existing list, but it will also handle the updates of the existing messages correctly. In addition to keeping track of message IDs, the `add_messages` function will also try to deserialize messages into LangChain `Message` object whenever a state update is receieved on the `messages` channel. Thus the graph inputs/state updates have the following format:
+
+```python
+# this is supported
+{"messages": [HumanMessage(content="message")]}
+
+# and this is also supported
+{"messages": [{"type": "human", "content": "message"}]}
+```
+
+Here is Graph State defined for handling Messages
+
+```python
+from langchain_core.messages import AnyMessage
+from langgraph.graph_message import add_messages
+from typing import Annotated
+from typing_extensions import TypedDict
+
+class graphState(TypedDict):
+    messages: Annotated[list[AnyMessage], add_messages]
+```
+
+Since having a list of messages in the graph state is common there exist a prebuilt state `MessagesState` which makes it easy to use messages. `MessagesState` is defined with a single `messages` key which is a list of `AnyMessage` objects and uses the `add_messages` reducer. Here is a typical useage of this class with subclassing which adds more fields:
+
+```python
+from langgraph.graph import MessagesState
+
+class State(MessagesState):
+    documents: list[str]
+```
+
 
 ### The Schema of the Graph
 

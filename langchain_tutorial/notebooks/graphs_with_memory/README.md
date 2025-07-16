@@ -69,4 +69,13 @@ Typically, all graph nodes communicate with a single schema. This means that the
 
 * different input / output schemas for the graph are needed. The output, for example, could only contain a single relevant output key.
 
+It is possible to have nodes wrote to private state channels within the graph for internal node communication. In such case we define a private schema, `PrivateState`. 
 
+
+
+**Passing private state between nodes**
+
+We want internal nodes to exchange information that is crucial for intermediate logic but does not need to be part of the main schema of the graph. 
+In the example below we create sequential graph consisting of `node_1`, `node_2`, and `node_3`, where private data is passed between `node_1` and `node_2` while `node_3`, which is the output, has access to the public overall state
+
+The notebook with this example can be found [here](https://github.com/dimitarpg13/langchain_tutorial/blob/main/langchain_tutorial/notebooks/private_state/SimplePrivateState.ipynb).

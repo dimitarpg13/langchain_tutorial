@@ -1,4 +1,4 @@
-# Resource on graphs utilizing memory
+# Resource on constructing graphs / chains
 
 ## First Step: Construct a Simple Graph
 
